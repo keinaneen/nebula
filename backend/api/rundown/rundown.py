@@ -184,6 +184,7 @@ async def get_rundown(request: RundownRequestModel) -> RundownResponseModel:
             is_empty=False,
             is_primary=primary,
             meta=meta,
+            logo=imeta.get("logo"),
         )
 
         rows.append(row)
