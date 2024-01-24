@@ -116,6 +116,16 @@ const Select = ({
       >
         <option value={null}></option>
         {options.map((option) => (
+          option.role === 'hidden' ?(
+            <option key={option.value} value={option.value} hidden={true}>
+            {option.title}
+            </option>
+          ):
+          option.role === 'label' ?(
+            <option key={option.value} value={option.value} disabled={true} style={{fontWeight:'bold'}}>
+            {option.title}
+            </option>
+          ):
           <option key={option.value} value={option.value}>
             {option.title}
           </option>
