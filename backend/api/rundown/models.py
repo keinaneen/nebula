@@ -38,6 +38,7 @@ class RundownRow(ResponseModel):
     is_empty: bool = Field(True)
     is_primary: bool = Field(False)
 
+    logo: str | None = Field(None)
 
 class RundownResponseModel(ResponseModel):
     rows: list[RundownRow] = Field(default_factory=list)
