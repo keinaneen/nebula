@@ -140,7 +140,7 @@ const Select = ({
       <InputText
         value={displayValue}
         placeholder={placeholder}
-        readonly={true}
+        readOnly={true}
         style={{ flexGrow: 1 }}
         onDoubleClick={() => {
           !disabled && setDialogVisible(true)
